@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page_title }}</title>
+        <link href="{{ absolute_url(asset('styles/home.css') )}}" rel="stylesheet">
+    </head>
+    <body class="body">
+        {% include 'blocks/LeftPanel.html.twig'%}
+        <div class="form_div">
+            <form class="form" method="post">
+                <input class="input_form" name="name" type="text" placeholder="Name">
+                <input class="input_form" name="password" type="password" placeholder="password">
+                <input class="submit_button" type="submit">
+            </form>
+        </div>
+    </body>
+</html>

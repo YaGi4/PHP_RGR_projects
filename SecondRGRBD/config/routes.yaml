@@ -1,0 +1,59 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+agent_list:
+    path: /get/all/agent
+    controller: App\Controller\GetAllAgentController::show
+delete_agent_from_list:
+    path: /get/all/agent
+    controller: App\Controller\GetAllAgentController::delete
+get_new_agent_page:
+    path: /create/new/agent
+    controller: App\Controller\CreateNewAgentController::show
+post_new_agent_page:
+    path: /create/new/agent
+    controller: App\Controller\CreateNewAgentController::post
+agreement_list:
+    path: /get/all/agreements
+    controller: App\Controller\GetAllAgreementController::show
+delete_agreement_from_list:
+    path: /get/all/agreements
+    controller: App\Controller\GetAllAgreementController::delete
+get_new_agreement_page:
+    path: /create/new/agreement
+    controller: App\Controller\CreateNewAgreementController::show
+post_new_agreement_page:
+    path: /create/new/agreement
+    controller: App\Controller\CreateNewAgreementController::post
+filials_list:
+    path: /get/all/filials
+    controller: App\Controller\GetAllFilialsController::show
+delete_filial_from_list:
+    path: /get/all/filials
+    controller: App\Controller\GetAllFilialsController::delete
+get_new_filial_page:
+    path: /create/new/filial
+    controller: App\Controller\CreateNewFilialController::show
+post_new_filial_page:
+    path: /create/new/filial
+    controller: App\Controller\CreateNewFilialController::post
+insurance_types_list:
+    path: /get/all/insurance/type
+    controller: App\Controller\GetAllInsuranceTypeController::show
+delete_insurance_types_from_list:
+    path: /get/all/insurance/type
+    controller: App\Controller\GetAllInsuranceTypeController::delete
+get_new_insurance_types_page:
+    path: /create/new/insurance/type
+    controller: App\Controller\CreateNewInsuranceTypeController::show
+post_new_insurance_types_page:
+    path: /create/new/insurance/type
+    controller: App\Controller\CreateNewInsuranceTypeController::post
+get_sign_in_page:
+    path: /sign/in
+    controller: App\Controller\SignInController::getSignInPage
+sign_in:
+    path: /sign/in
+    controller: App\Controller\SignInController::signIn

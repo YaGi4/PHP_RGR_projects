@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page_title }}</title>
+        <link href="{{ absolute_url(asset('styles/newagentbody.css') )}}" rel="stylesheet">
+    </head>
+    <body class="body">
+        {% include 'blocks/Header.html.twig'%}
+        <div class="hh">Add new agent</div>
+        {% if filials != null %}
+        <form class="create_form" method="post">
+            <div class="input_area"><input class="input_text" type="text" name="agent_name" placeholder="name"></div>
+            <div class="input_area"><input class="input_text" type="text" name="agent_surname" placeholder="surname"></div>
+            <div class="input_area"><input class="input_text" type="text" name="agent_patronymic" placeholder="patronymic"></div>
+            <div class="input_area"><input class="input_text" type="text" name="agent_address" placeholder="address"></div>
+            <div class="input_area"><input class="input_text" type="text" name="agent_phone" placeholder="phone"></div>
+            <div class="input_select_area">
+                <select class="input_select" name="filial">
+                    {% for filial in filials %}
+                        <option value="{{ filial.id }}">{{ filial.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="button" type="submit" name="submit" title="create"><div class="button_area">create</div></button>
+        </form>
+        {% else %}
+            <a href="/create/new/filial" class="link_on_create"> Create Filial at first </a>
+        {% endif %}
+    </body>
+</html>

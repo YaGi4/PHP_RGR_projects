@@ -1,0 +1,59 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+client_list:
+    path: /get/all/clients
+    controller: App\Controller\GetAllClientsController::show
+delete_client_from_list:
+    path: /get/all/clients
+    controller: App\Controller\GetAllClientsController::delete
+get_new_client_page:
+    path: /create/new/client
+    controller: App\Controller\CreateNewClientController::show
+post_new_client_page:
+    path: /create/new/client
+    controller: App\Controller\CreateNewClientController::add
+rooms_list:
+    path: /get/all/rooms
+    controller: App\Controller\GetAllRoomsController::show
+delete_rooms_from_list:
+    path: /get/all/rooms
+    controller: App\Controller\GetAllRoomsController::delete
+get_new_room_page:
+    path: /create/new/room
+    controller: App\Controller\CreateNewRoomController::show
+post_new_room_page:
+    path: /create/new/room
+    controller: App\Controller\CreateNewRoomController::add
+booking_list:
+    path: /get/all/booking
+    controller: App\Controller\GetAllBookingController::show
+delete_booking_from_list:
+    path: /get/all/booking
+    controller: App\Controller\GetAllBookingController::delete
+get_new_booking_page:
+    path: /create/new/booking
+    controller: App\Controller\CreateNewBookingController::show
+post_new_booking_page:
+    path: /create/new/booking
+    controller: App\Controller\CreateNewBookingController::add
+check_in_list:
+    path: /get/all/check/in
+    controller: App\Controller\GetAllCheckInController::show
+delete_check_in_from_list:
+    path: /get/all/check/in
+    controller: App\Controller\GetAllCheckInController::delete
+get_new_check_in_page:
+    path: /create/new/check/in
+    controller: App\Controller\CreateNewCheckInController::show
+post_new_check_in_page:
+    path: /create/new/check/in
+    controller: App\Controller\CreateNewCheckInController::add
+get_sign_in_page:
+    path: /sign/in
+    controller: App\Controller\SignInController::getSignInPage
+sign_in:
+    path: /sign/in
+    controller: App\Controller\SignInController::signIn

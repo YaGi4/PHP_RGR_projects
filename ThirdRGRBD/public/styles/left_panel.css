@@ -1,0 +1,19 @@
+.links{
+    text-decoration: none;
+    color: gray;
+    text-align: center;
+}
+.links:hover{
+    color: black;
+}
+.left_panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 8%;
+    border-right: #595959 solid 2px;
+}
+.login_div{
+    text-decoration: none;
+    text-align: center;
+}

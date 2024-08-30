@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page_title }}</title>
+    <link href="{{ absolute_url(asset('styles/home.css') )}}" rel="stylesheet">
+</head>
+<body class="body">
+{% include 'blocks/LeftPanel.html.twig'%}
+<form class="create_form" method="post">
+    <select class="input_select" name="type">
+        {% for type in types %}
+            <option value="{{ type.getId() }}">{{ type.getDescription() }}</option>
+        {% endfor %}
+    </select>
+    <div class="input_area"><input class="input_text" type="text" name="durationhrs" placeholder="duration"></div>
+    <div class="input_time">start date:<input class="input_select" type="datetime-local" name="start_date"></div>
+    <div class="input_time">expiration date:<input class="input_select" type="datetime-local" name="expiration_date"></div>
+    <button class="button_create" type="submit" name="submit" title="create"><div class="button_area">create</div></button>
+</form>
+</body>
+</html>

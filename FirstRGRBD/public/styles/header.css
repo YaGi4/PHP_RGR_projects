@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #0f4f0f;
+    min-height: 10vh;
+    border-bottom: black 3px solid;
+}
+.all_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80%;
+}
+.hl{
+    text-decoration: none;
+    color: gray;
+}
+.hl:hover{
+    color: white;
+    transition: 0.25s linear;
+}

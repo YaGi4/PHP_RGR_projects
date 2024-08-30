@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page_title }}</title>
+    <link href="{{ absolute_url(asset('styles/addnewbody.css') )}}" rel="stylesheet">
+</head>
+<body class="body">
+{% include 'blocks/Header.html.twig'%}
+<div class="hh">Add new Room</div>
+<form class="create_form" method="post">
+    <div class="input_area"><input class="input_text" type="text" name="number" placeholder="room number"></div>
+    <div class="input_area"><input class="input_text" type="text" name="price" placeholder="price"></div>
+    <div class="input_area"><input class="input_text" type="text" name="number_of_person" placeholder="number of person"></div>
+    <div class="input_select_area">
+        <select class="input_select" name="type">
+            {% for type in types %}
+                <option value="{{ type.getId() }}">{{ type.getTypeName() }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button class="button" type="submit" name="submit" title="create"><div class="button_area">create</div></button>
+</form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<head>
+    <link href="{{ absolute_url(asset('styles/left_panel.css'))}}" rel="stylesheet">
+</head>
+<div class="left_panel">
+    <div class="login_div">
+        {% if user_name == null %}
+            <a class="links" href="/sign/in">
+                sign in
+            </a>
+        {% else %}
+            <a class="links" href="/sign/out">
+                sign out
+            </a>{{ user_name }}
+
+        {% endif %}
+    </div>
+    <a class="links" href="/get/all/employeers">employees</a>
+    <a class="links" href="/get/all/employees/work">employees works</a>
+    <a class="links" href="/get/all/jobs">jobs</a>
+    <a class="links" href="/get/all/types/works">types works</a>
+</div>

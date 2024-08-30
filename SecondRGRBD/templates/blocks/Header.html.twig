@@ -1,0 +1,25 @@
+<head>
+    <link href="{{ absolute_url(asset('styles/header.css') )}}" rel="stylesheet" />
+</head>
+<header class = "header">
+    <div class="links">
+        <a class="hl" href = "/get/all/agent">All agents</a>
+        <a class="hl" href = "/get/all/agreements">All agreements</a>
+        <a class="hl" href = "/get/all/filials">All filials</a>
+        <a class="hl" href = "/get/all/insurance/type">All insurance types</a>
+    </div>
+    <div class="links">
+        <a class="hl" href = "/create/new/agent">New agents</a>
+        <a class="hl" href = "/create/new/agreement">New agreements</a>
+        <a class="hl" href = "/create/new/filial">New filials</a>
+        <a class="hl" href = "/create/new/insurance/type">New insurance types</a>
+    </div>
+    <div>
+        {% if userName != null %}
+            <a class="hl" href="/sign/out" >sign out</a>
+            {{ userName }}
+        {% else %}
+            <a class="hl" href="/sign/in">sign in</a>
+        {% endif %}
+    </div>
+</header>

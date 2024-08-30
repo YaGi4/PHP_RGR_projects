@@ -1,0 +1,62 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+home:
+    path: /home/page
+    controller: App\Controller\HomePageController::showHomePage
+sign_in_get:
+    path: /sign/in
+    controller: App\Controller\SignInController::show
+sign_in_post:
+    path: /sign/in
+    controller: App\Controller\SignInController::signin
+show_employee:
+    path: /get/all/employeers
+    controller: App\Controller\GetAllEmployeersController::show
+delete_employee:
+    path: /get/all/employeers
+    controller: App\Controller\GetAllEmployeersController::delete
+show_new_employee_page:
+    path: /create/new/employeer
+    controller: App\Controller\CreateNewEmployeerController::show
+create_employee:
+    path: /create/new/employeer
+    controller: App\Controller\CreateNewEmployeerController::create
+show_employee_work:
+    path: /get/all/employees/work
+    controller: App\Controller\GetAllEmployeesWorkController::show
+delete_employee_work:
+    path: /get/all/employees/work
+    controller: App\Controller\GetAllEmployeesWorkController::delete
+show_new_employee_work_page:
+    path: /create/new/employees/work
+    controller: App\Controller\CreateNewEmployeesWorkController::show
+create_employee_work:
+    path: /create/new/employees/work
+    controller: App\Controller\CreateNewEmployeesWorkController::create
+show_jobs:
+    path: /get/all/jobs
+    controller: App\Controller\GetAllJobsController::show
+delete_job:
+    path: /get/all/jobs
+    controller: App\Controller\GetAllJobsController::delete
+show_new_job_page:
+    path: /create/new/job
+    controller: App\Controller\CreateNewJobController::show
+create_job:
+    path: /create/new/job
+    controller: App\Controller\CreateNewJobController::create
+show_types:
+    path: /get/all/types/works
+    controller: App\Controller\GetAllTypesWorksController::show
+delete_types:
+    path: /get/all/types/works
+    controller: App\Controller\GetAllTypesWorksController::delete
+show_new_type_page:
+    path: /create/new/type/work
+    controller: App\Controller\CreateNewTypeWorkController::show
+create_type:
+    path: /create/new/type/work
+    controller: App\Controller\CreateNewTypeWorkController::create

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page_title }}</title>
+        <link href="{{ absolute_url(asset('styles/addnewbody.css') )}}" rel="stylesheet">
+    </head>
+    <body class="body">
+        {% include 'blocks/Header.html.twig'%}
+        <div class="hh">Add new Check In</div>
+        <form class="create_form" method="post">
+            <div class="input_select_area">
+                <select class="input_select" name="room">
+                    {% for room in rooms %}
+                        <option value="{{ room.id }}">{{ room.RoomNumber }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input_select_area">
+                <select class="input_select" name="client">
+                    {% for client in clients %}
+                        <option value="{{ client.id }}">{{ client.Name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input_time">заселение:<input class="input_select" type="datetime-local" name="start_date"></div>
+            <div class="input_time">выселение:<input class="input_select" type="datetime-local" name="expiration_date"></div>
+            <button class="button" type="submit" name="submit" title="create"><div class="button_area">create</div></button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+.body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.entity_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    width: 96%;
+    max-height: 6vh;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.agents_tables{
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+.button{
+    border: none;
+    background-color: white;
+}
+.image{
+    max-width: 3vh;
+    filter: opacity(0.25);
+}
+.image:hover{
+    filter: opacity(1);
+    transition: 0.2s;
+}

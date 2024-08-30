@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page_title }}</title>
+        <link href="{{ absolute_url(asset('styles/agentbody.css') )}}" rel="stylesheet">
+    </head>
+    <body class="body">
+        {% include 'blocks/Header.html.twig'%}
+        <h1 style="display: flex; justify-content: center">{{ page_title }}</h1>
+        <div class="agents_tables">
+            {% if agents != null %}
+            {% for agent in agents %}
+                <div class="entity_div">
+                   id: {{ agent.getId() }}, name: {{ agent.getAgentName() }}, surname: {{ agent.getAgentSurname() }}
+                    , patronymic: {{ agent.getAgentPatronymic() }}, address: {{ agent.getAddress() }}, phone: {{ agent.getPhone() }}, code filial: {{ agent.filialName }}
+                    <form class="delete_form" method="post">
+                        <input type="text" name="id" value="{{ agent.getId() }}" style = "display: none">
+                        <button class="button" type="submit" name="submit">
+                            <img class="image" src="{{ absolute_url(asset('images/trash.png') )}} " alt="delete">
+                        </button>
+                    </form>
+                </div>
+            {% endfor %}
+            {% else %}
+                <div> Agents not found </div>
+            {% endif %}
+        </div>
+    </body>
+</html>

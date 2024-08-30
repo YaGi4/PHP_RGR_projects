@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page_title }}</title>
+    <link href="{{ absolute_url(asset('styles/home.css') )}}" rel="stylesheet">
+</head>
+<body class="body">
+{% include 'blocks/LeftPanel.html.twig'%}
+<form class="create_form" method="post">
+    <select class="input_select" name="employee">
+        {% for employee in employeers %}
+            <option value="{{ employee.getId() }}">{{ employee.getFirstName() }}</option>
+        {% endfor %}
+    </select>
+    <select class="input_select" name="job">
+        {% for job in jobs %}
+            <option value="{{ job.getId() }}">{{ job.getId()  }}</option>
+        {% endfor %}
+    </select>
+    <button class="button_create" type="submit" name="submit" title="create"><div class="button_area">create</div></button>
+</form>
+</body>
+</html>

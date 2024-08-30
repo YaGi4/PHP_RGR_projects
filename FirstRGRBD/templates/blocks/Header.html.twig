@@ -1,0 +1,25 @@
+<head>
+    <link href="{{ absolute_url(asset('styles/header.css') )}}" rel="stylesheet" />
+</head>
+<header class = "header">
+    <div class="links">
+        <a class="hl" href = "/get/all/clients">All clients</a>
+        <a class="hl" href = "/get/all/rooms">All rooms</a>
+        <a class="hl" href = "/get/all/booking">All bookings</a>
+        <a class="hl" href = "/get/all/check/in">All Check In</a>
+    </div>
+    <div class="links">
+        <a class="hl" href = "/create/new/client">New clients</a>
+        <a class="hl" href = "/create/new/room">New room</a>
+        <a class="hl" href = "/create/new/booking">New booking</a>
+        <a class="hl" href = "/create/new/check/in">New Check In</a>
+    </div>
+    <div>
+        {% if userName != null %}
+            <a class="hl" href="/sign/out" >sign out</a>
+            {{ userName }}
+        {% else %}
+            <a class="hl" href="/sign/in">sign in</a>
+        {% endif %}
+    </div>
+</header>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ page_title }}</title>
+    <link href="{{ absolute_url(asset('styles/newagentbody.css') )}}" rel="stylesheet">
+</head>
+<body class="body">
+{% include 'blocks/Header.html.twig'%}
+<div class="hh">Sign in</div>
+<form class="create_form" method="post">
+    <div class="input_area"><input class="input_text" type="text" name="name" placeholder="name"></div>
+    <div class="input_area"><input class="input_text" type="password" name="password" placeholder="password"></div>
+    <button class="button" type="submit" name="submit" title="create"><div class="button_area">Sign in</div></button>
+</form>
+</body>
+</html>

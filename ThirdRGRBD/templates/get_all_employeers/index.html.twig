@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page_title }}</title>
+        <link href="{{ absolute_url(asset('styles/home.css') )}}" rel="stylesheet">
+    </head>
+    <body class="body">
+        {% include 'blocks/LeftPanel.html.twig'%}
+
+        <div class="agents_tables" >
+            <a class="links" style="margin: 5vh" href="/create/new/employeer">
+                Create new employee
+            </a>
+            {% if employeers != null %}
+                {% for employee in employeers %}
+                    <div class="entity_div">
+                        id: {{ employee.getId() }},
+                        Lastname: {{ employee.getLastName() }},
+                        Firstname: {{ employee.getFirstName() }},
+                        Patronymic: {{ employee.getPatronymic() }},
+                        Salary: {{ employee.getSalary() }}
+                        <form class="delete_form" method="post">
+                            <input type="text" name="id" value="{{ employee.getId() }}" style = "display: none">
+                            <button class="button_delete" type="submit" name="submit">delete</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div> Employeers not found </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
